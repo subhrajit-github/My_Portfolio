@@ -89,7 +89,7 @@
        --border:217 33% 20%;
     }
     * padding{
-        @apply border:border
+           /* Removed invalid utility class as Tailwind does not support this variant */
     }
     html{
         @apply scroll-smooth;
