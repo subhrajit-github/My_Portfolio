@@ -36,7 +36,7 @@ const projects = [
 export const ProjectsSection = () => {
     return <section id="projects" className="py-24 px-4 relative">
         <div className="container mx-auto max-w-5xl">
-            <h2 classname="text-3xl md:text-4xl font-bold mb-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
 
                 Featured<span className="text-primary">Projects</span></h2>
 
@@ -53,8 +53,8 @@ export const ProjectsSection = () => {
                         <div className="flex-1 flex flex-col justify-between p-6 pb-12">
                             <div>
                                 <div className="flex flex-wrap gap-2 mb-4">
-                                    {project.tags.map((tag) => (
-                                        <span className="px-2 py-2 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">{tag}</span>
+                                    {project.tags.map((tag,idx) => (
+                                        <span key={idx} className="px-2 py-2 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">{tag}</span>
                                     ))}
                                 </div>
                                 <h3 className="text-xl font-semibold mb-1 ">{project.title}</h3>
@@ -74,7 +74,7 @@ export const ProjectsSection = () => {
             </div>
 
             <div className="text-center mt-12">
-                <a href="https://github.com/subhrajit-github" className="cosmic-button w-fit inline-flex items-center mx-auto gap-2">
+                <a href="https://github.com/subhrajit-github" target="_blank" className="cosmic-button w-fit inline-flex items-center mx-auto gap-2">
                     Check My Github <ArrowRight size={16}/>
                 </a>
             </div>
